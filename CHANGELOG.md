@@ -12,8 +12,4 @@
 
 * add missing role in seed ([#36](https://github.com/macrofy/macrofy-com/issues/36)) ([2fb1e36](https://github.com/macrofy/macrofy-com/commit/2fb1e36e1083f34822634fb53ec256b78c4df459))
 
-# Change Log
-All notable changes to this project will be documented in this file.
- 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+

@@ -1,6 +1,7 @@
 /** @type {import('semantic-release').GlobalConfig} */
 module.exports = {
   branches: ['main'],
+  repositoryUrl: 'https://github.com/macrofy/macrofy-com',
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
