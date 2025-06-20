@@ -1,3 +1,5 @@
+'use server';
+
 import type { CodeBlockProps } from "@/types/ui";
 import { codeToHtml } from "shiki";
 
