@@ -1,32 +1,7 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import { codeToHtml } from "shiki";
-
-async function Code() {
-  const html = await codeToHtml(
-    `
-    import SwiftUI
-    import MacrofySwift
-    import MacrofySwiftUI
-    
-    struct NutritionView: View {
-          var body: some View {
-              VStack {
-                  Dashboard()
-              }
-          }
-      }Ï`,
-    {
-      lang: "swift",
-      theme: "slack-dark",
-      colorReplacements: {
-        "#222222": "#00000",
-      },
-    }
-  );
-
-  return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
-}
+import dedent from "dedent";
+import { CodeBlock } from "./CodeBlock";
 
 export default function Hero() {
   return (
@@ -65,7 +40,10 @@ export default function Hero() {
                   >
                     Documentation
                   </Link>
-                  <Link href="/sign-up" className="text-sm/6 font-semibold text-gray-900">
+                  <Link
+                    href="/sign-up"
+                    className="text-sm/6 font-semibold text-gray-900"
+                  >
                     Start Coding Free <span aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -96,7 +74,24 @@ export default function Hero() {
                           </div>
                         </div>
                       </div>
-                      <div className="px-6 pt-6 pb-14">{Code()}</div>
+                      <div className="px-6 pt-6 pb-14 bg-gray-800">
+                        <CodeBlock lang="swift">
+                          {dedent(`
+                                import SwiftUI
+
+                                import MacrofySwift
+                                import MacrofySwiftUI
+
+                                struct NutritionView: View {
+                                    var body: some View {
+                                        VStack {
+                                            Dashboard()
+                                        }
+                                    }
+                                }
+                            `)}
+                        </CodeBlock>
+                      </div>
                     </div>
                   </div>
                   <div
