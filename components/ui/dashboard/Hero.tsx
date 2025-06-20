@@ -2,6 +2,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import dedent from "dedent";
 import { CodeBlock } from "./CodeBlock";
+import { Terminal } from "./Terminal";
 
 export default function Hero() {
   return (
@@ -61,44 +62,29 @@ export default function Hero() {
                   className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-emerald-100 opacity-20 ring-1 ring-white ring-inset md:ml-20 lg:ml-36"
                   aria-hidden="true"
                 />
-                <div className="relative px-6 pt-8 sm:pt-16 md:pr-0 md:pl-16">
-                  <div className="mx-auto max-w-2xl md:mx-0 md:max-w-none">
-                    <div className="w-screen overflow-hidden rounded-tl-xl bg-gray-900">
-                      <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                        <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
-                          <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
-                            NutritionView.swift
-                          </div>
-                          <div className="border-r border-gray-600/10 px-4 py-2">
-                            App.swift
-                          </div>
-                        </div>
-                      </div>
-                      <div className="px-6 pt-6 pb-14 bg-gray-800">
-                        <CodeBlock lang="swift">
-                          {dedent(`
-                                import SwiftUI
+                <Terminal
+                  filenameOne="NutritionView.swift"
+                  filenameTwo="App.swift"
+                  codeBlock={
+                    <CodeBlock lang="swift">
+                      {dedent(`
+                        import SwiftUI
 
-                                import MacrofySwift
-                                import MacrofySwiftUI
+                        import MacrofySwift
+                        import MacrofySwiftUI
 
-                                struct NutritionView: View {
-                                    var body: some View {
-                                        VStack {
-                                            Dashboard()
-                                        }
-                                    }
+                        struct NutritionView: View {
+                            var body: some View {
+                                VStack {
+                                    Dashboard()
                                 }
-                            `)}
-                        </CodeBlock>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="pointer-events-none absolute inset-0 ring-1 ring-black/10 ring-inset md:rounded-3xl"
-                    aria-hidden="true"
-                  />
-                </div>
+                            }
+                        }
+                    `)}
+                    </CodeBlock>
+                  }
+                />
+                );
               </div>
             </div>
           </div>
