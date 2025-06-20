@@ -38,7 +38,7 @@ export default function Hero() {
               <div className="max-w-lg">
                 <div className="mt-12 sm:mt-16 lg:mt-8">
                   <a href="#" className="inline-flex space-x-6">
-                    <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/10 ring-inset">
+                    <span className="rounded-full bg-emerald-600/10 px-3 py-1 text-sm/6 font-semibold text-emerald-600 ring-1 ring-emerald-600/10 ring-inset">
                       What's new
                     </span>
                     <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
