@@ -85,7 +85,6 @@ export default function Hero() {
                     </CodeBlock>
                   }
                 />
-                );
               </div>
             </div>
           </div>
