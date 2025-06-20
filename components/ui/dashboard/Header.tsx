@@ -24,7 +24,7 @@ import Logo from "@/images/logo.svg";
 
 const navigation = [
   { name: "Features", href: "#" },
-  { name: "Docs", href: `${process.env.NEXT_PUBLIC_DOCS_URL}` },
+  { name: "Docs", href: process.env.NEXT_PUBLIC_DOCS_URL ?? "#" },
   { name: "Pricing", href: "/pricing" },
 ];
 
